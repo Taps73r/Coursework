@@ -1,0 +1,39 @@
+.element {
+    background-color: #ffffff;
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+    /* line-height: 400px; */
+    /* font-size: 30px; */
+    border: 5px solid pink;
+    border-radius: 10px;
+    
+}
+
+.element-img {
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+    border: 3px solid pink;
+    border-radius: 10px;
+}
+
+.element-data {
+    text-align: center;
+}
+
+.element-name {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.element-text{
+    font-size: 15px;
+    padding-bottom: 5px; 
+}
+.element-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 36px 10px;
+}

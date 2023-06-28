@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/uploads/icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bg.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="workmenu.css">
+    <link rel="stylesheet" href="item.css">
+    <title>Мережеві накопичувачі</title>
+</head>
+<body>
+<form name="productForm" action="/products" method="POST" id="modalform" enctype="multipart/form-data">
+    <div class="conteinar" id="modalcont">
+        <div class="head">
+            <p class="text-h">
+               Create NAS
+            </p>
+            <div class="btn-grid">
+                <input type="submit" value="X" id="btn-close" onclick="event.preventDefault(); Modaleclose()">
+            </div>
+        </div>
+        <div class="center">
+            <input type="hidden" name="productId" id="productId">
+                <input type="hidden" name="oldCloudinaryPublicId" id="oldCloudinaryPublicId">
+                <input type="hidden" name="oldImagePath" id="oldImagePath">
+            <p class="text-p">
+                Модель NAS:
+            </p>
+            <input class="text-field" id="js-input-model" maxlength="30" name="productName" placeholder="Введіть модель NAS" type="text">
+            <p class="text-p">
+                Модель процесора:
+            </p>
+            <input class="text-field" id="js-proc" maxlength="30" name="productProc" placeholder="Введіть модель процесора" type="text">
+            <p class="text-p">
+                Оперативна пам'ять:
+            </p>
+            <input class="text-field" id="js-op" min="1" max="9999" onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)" name="productOp" placeholder="Введіть оперативну пам'ять в ГБ" type="number">
+            <p class="text-p">
+                Ціна:
+            </p>
+            <input class="text-field" id="js-lan" min="1" max="99999" onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)" name="productLan" placeholder="Введіть ціну" type="number">
+            <p class="text-p">
+                Слоти для дисків:
+            </p>
+            <select name="productDisk" id="js-disk" class="select-t">
+                <option class="text-field" value="1">1</option>
+                <option class="text-field" value="2">2</option>
+                <option class="text-field" value="3">3</option>
+                <option class="text-field" value="4">4</option>
+            </select>
+            <p class="text-p" style="padding-bottom: 10px;">
+                Виберіть файл зображення:
+            </p>
+            <input class="file" name="productImage" type="file" id="productImage" accept=".jpeg, .jpg, .png">
+            <button type="submit" id="submitBtn" onclick="modalpush(); event.preventDefault();" value="Confirm" class="buttonedit">Confirm</button>
+        </div>
+    </div>
+</form>
+<div class="grey" onclick="Modaleclose();" id="greybg"></div>
+    <div class="menu">
+        <div class="nameshop">
+            <b>NAS SHOP</b>
+        </div>
+                <div class="search"><input type="search" class="searchfield" placeholder="Search your NAS"/></div>
+                <div class="green"><button class="green-button">Search</button></div>
+    </div>
+    <div class="workmenu">
+        <div class="Manage-nas"><b>Manage NAS</b></div>
+        <div>
+            <button type="submit" class="create-button" onclick="Modaleshow()">Create</button>
+        </div>
+        <div class="switch-elements">
+            <div class="sort-text">
+                <b>Sort by price</b>
+            </div>
+            <div>
+                <div class="switch-div">
+            <label class="switch">
+                <input type="checkbox" id="sortcheckbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="dataContainer">
+    </div>
+     <script src="buttons.js"></script>
+     <script src="valid.js"></script>
+     <script src="forminput.js"></script>
+</body>
+</html>
