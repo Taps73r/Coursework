@@ -12,11 +12,20 @@
   }
   
   @media (max-width: 768px) {
-	/* Стилі для пристроїв з максимальною шириною 768px */
 	.dataContainer {
 	  top: 0;
 	  left: 0;
 	  position: relative;
+	  height: auto; 
+	}
+  }
+  
+  @media (max-height: 900px) {
+	.dataContainer {
+		top: 0;
+		left: 0;
+		position: relative;
+		height: auto; 
 	}
   }
 .menu{
