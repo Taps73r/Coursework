@@ -4,12 +4,21 @@
 }
 
 .dataContainer {
-position: absolute;
-top: 20%;
-left: 24%;
-display: flex;
-flex-wrap: wrap;
-}
+	position: absolute;
+	top: 20%;
+	left: 24%;
+	display: flex;
+	flex-wrap: wrap;
+  }
+  
+  @media (max-width: 768px) {
+	/* Стилі для пристроїв з максимальною шириною 768px */
+	.dataContainer {
+	  top: 0;
+	  left: 0;
+	  position: relative;
+	}
+  }
 .menu{
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
